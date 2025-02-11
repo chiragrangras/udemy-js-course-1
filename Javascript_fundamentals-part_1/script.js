@@ -109,9 +109,9 @@ console.log(BMIMark, BMIJohn, markHigherBMI);
 */
 
 const firstName = "Jonas";
-const job = "techer";
+const job = "teacher";
 const birthYear = 1991;
 const year = 2037;
 
-const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' year old ' + job + '!';
+const jonas = `I'm ${firstName} a ${year - birthYear} year old ${job}!`;
 console.log(jonas);
