@@ -106,7 +106,6 @@ const BMIJohn = massJohn / (heightJohn * heightJohn);
 const markHigherBMI = BMIMark > BMIJohn;
 
 console.log(BMIMark, BMIJohn, markHigherBMI);
-*/
 
 const firstName = "Jonas";
 const job = "teacher";
@@ -115,3 +114,34 @@ const year = 2037;
 
 const jonas = `I'm ${firstName} a ${year - birthYear} year old ${job}!`;
 console.log(jonas);
+
+console.log(`Just regular string...`);
+
+console.log(`String with \n\
+multiple \n\
+lines`);
+
+console.log(`String
+multiple
+lines`);
+*/
+
+const age = 15;
+
+if (age >= 18) {
+  console.log("Sara can start driving license 🚗");
+} else {
+  const yearLeft = 18 - age;
+  console.log(`Sara is too young. Wait another ${yearLeft} year 😊`);
+}
+
+const birthYear = 1985;
+
+let century;
+if(birthYear <= 2000){
+    century = 20;
+}else{
+    century = 21;
+}
+
+console.log(century);
