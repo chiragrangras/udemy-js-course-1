@@ -124,15 +124,14 @@ lines`);
 console.log(`String
 multiple
 lines`);
-*/
 
 const age = 15;
 
 if (age >= 18) {
-  console.log("Sara can start driving license 🚗");
+    console.log("Sara can start driving license 🚗");
 } else {
-  const yearLeft = 18 - age;
-  console.log(`Sara is too young. Wait another ${yearLeft} year 😊`);
+    const yearLeft = 18 - age;
+console.log(`Sara is too young. Wait another ${yearLeft} year 😊`);
 }
 
 const birthYear = 1985;
@@ -145,3 +144,18 @@ if(birthYear <= 2000){
 }
 
 console.log(century);
+*/
+
+// type conversion
+const inputYear = 1991;
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number("Johns"));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+// type coercion
+console.log("23" - "10" - 3);
+console.log("23" * "2");
