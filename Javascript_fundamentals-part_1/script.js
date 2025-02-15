@@ -15,7 +15,7 @@ console.log(firstName);
 let joanas_matilda = "JM";
 let $function = 27;
 
-let person = 'jonas';
+let person = "jonas";
 let PI = 3.1415;
 
 let myFirstJob = "Coder";
@@ -27,7 +27,6 @@ let job2 = "teacher";
 console.log(myFirstJob);
 console.log(myCurrentJob);
 
-
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
 
@@ -36,7 +35,7 @@ console.log(typeof javascriptIsFun);
 // console.log(typeof 23);
 // console.log(typeof "Jonas");
 
-javascriptIsFun = 'YES!';
+javascriptIsFun = "YES!";
 console.log(typeof javascriptIsFun);
 
 let year;
@@ -54,10 +53,10 @@ age = 32;
 const birthYear = 1990;
 // birthYear = 1991;
 
-var job = 'programmer';
-job = 'teacher';
+var job = "programmer";
+job = "teacher";
 
-LastName = 'Schmedtmann';
+LastName = "Schmedtmann";
 console.log(LastName);
 
 // Math operators
@@ -128,23 +127,37 @@ lines`);
 const age = 15;
 
 if (age >= 18) {
-    console.log("Sara can start driving license 🚗");
+  console.log("Sara can start driving license 🚗");
 } else {
-    const yearLeft = 18 - age;
-console.log(`Sara is too young. Wait another ${yearLeft} year 😊`);
+  const yearLeft = 18 - age;
+  console.log(`Sara is too young. Wait another ${yearLeft} year 😊`);
 }
 
 const birthYear = 1985;
 
 let century;
-if(birthYear <= 2000){
-    century = 20;
-}else{
-    century = 21;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
 }
 
 console.log(century);
-*/
+
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+console.log(BMIMark, BMIJohn);
+
+if (BMIMark > BMIJohn) {
+  console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
+} else {
+  console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
+}
 
 // type conversion
 const inputYear = 1991;
@@ -159,3 +172,31 @@ console.log(String(23), 23);
 // type coercion
 console.log("23" - "10" - 3);
 console.log("23" * "2");
+
+const money = 0;
+if (money) {
+    console.log(`Don't spend it all 😊`);
+} else {
+    console.log(`You should get a job!`);
+}
+*/
+
+const age = "18";
+if (age === 18) {
+  console.log("You just become an adlut (Strict)!");
+}
+if (age == 18) {
+  console.log("You just become an adlut (loose)!");
+}
+
+const favourite = Number(prompt("'What's your fovourite number ?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) {
+  console.log("Cool! 23 is an amzaing number!");
+} else if (favourite === 7) {
+  console.log(" 7 ia also a cool number");
+} else {
+  console.log("Number is not 23 or 7");
+}
