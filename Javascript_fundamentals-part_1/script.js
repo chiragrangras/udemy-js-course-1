@@ -196,7 +196,9 @@ console.log(typeof favourite);
 if (favourite === 23) {
   console.log("Cool! 23 is an amzaing number!");
 } else if (favourite === 7) {
-  console.log(" 7 ia also a cool number");
+  console.log("7 ia also a cool number");
 } else {
   console.log("Number is not 23 or 7");
 }
+
+if (favourite !== 23) console.log("Why not 237");
