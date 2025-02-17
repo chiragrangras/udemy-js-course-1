@@ -179,7 +179,6 @@ if (money) {
 } else {
     console.log(`You should get a job!`);
 }
-*/
 
 const age = "18";
 if (age === 18) {
@@ -202,3 +201,5 @@ if (favourite === 23) {
 }
 
 if (favourite !== 23) console.log("Why not 237");
+*/
+
