@@ -223,7 +223,6 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 } else {
   console.log("Someone else should drive....");
 }
-*/
 
 const day = "tuesday";
 
@@ -241,7 +240,7 @@ switch (day) {
   case "thursday":
     console.log("Record videos");
     break;
-  case "friday":
+    case "friday":
     console.log("Meet with students");
     break;
   case "saturday":
@@ -268,3 +267,4 @@ if(day === 'monday') {
 } else {
     console.log("Not a valid day!");
 }
+*/
