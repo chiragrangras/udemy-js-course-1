@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* let hasDriversLicense = false;
 const passTest = true;
@@ -92,7 +92,6 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
-*/
 
 const friends = ['Michael', 'Steven', 'Peter'];
 console.log(friends);
@@ -103,3 +102,28 @@ console.log(friends[0]);
 console.log(friends[2]);
 
 console.log(friends.length);
+*/
+
+// Add Elements
+const friends = ["Michael", "Staven", "Peter"];
+const newLenght = friends.push("Jay");
+console.log(friends);
+
+friends.unshift("John");
+console.log(friends);
+
+// Remove Elements
+friends.pop(); // Last Elements
+console.log(friends);
+
+friends.shift();
+console.log(friends);
+
+friends.push(23);
+console.log(friends.includes("Steven"));
+console.log(friends.includes("Bob"));
+console.log(friends.includes(23));
+
+if (friends.includes("Steven")) {
+  console.log("You have a friend called Steven");
+}
