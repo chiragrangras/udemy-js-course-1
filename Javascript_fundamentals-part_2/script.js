@@ -102,7 +102,6 @@ console.log(friends[0]);
 console.log(friends[2]);
 
 console.log(friends.length);
-*/
 
 // Add Elements
 const friends = ["Michael", "Staven", "Peter"];
@@ -125,5 +124,8 @@ console.log(friends.includes("Bob"));
 console.log(friends.includes(23));
 
 if (friends.includes("Steven")) {
-  console.log("You have a friend called Steven");
+    console.log("You have a friend called Steven");
 }
+*/
+
+
