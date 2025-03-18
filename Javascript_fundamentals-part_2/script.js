@@ -126,7 +126,6 @@ console.log(friends.includes(23));
 if (friends.includes("Steven")) {
     console.log("You have a friend called Steven");
 }
-*/
 
 const jonasArray = [
     'Jonas',
@@ -142,4 +141,28 @@ const jonas = {
     age: 2037 - 1991,
     job: 'teacher',
     friends: ['Michael','Peter','Steven']
+}
+*/
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+};
+
+console.log(jonas);
+
+console.log(jonas.firstName);
+console.log(jonas["lastName"]);
+
+const interestedIn = prompt(
+  `What do you want to know about Jonas? Choose between firstName,lastName,age,job and friends`
+);
+
+if (jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+}else{
+    console.log('Wrong request! Choose between firstNme,lastName,age,job and friends');
 }
