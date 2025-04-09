@@ -142,12 +142,11 @@ const jonas = {
     job: 'teacher',
     friends: ['Michael','Peter','Steven']
 }
-*/
 
 const jonas = {
-  firstName: "Jonas",
-  lastName: "Schmedtmann",
-  age: 2037 - 1991,
+    firstName: "Jonas",
+    lastName: "Schmedtmann",
+    age: 2037 - 1991,
   job: "teacher",
   friends: ["Michael", "Peter", "Steven"],
 };
@@ -166,3 +165,12 @@ if (jonas[interestedIn]) {
 }else{
     console.log('Wrong request! Choose between firstNme,lastName,age,job and friends');
 }
+
+jonas.location = "Portugal";
+jonas["twitter"] = "@jonasschmedtmann";
+console.log(jonas);
+
+console.log(
+    `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+);
+*/
