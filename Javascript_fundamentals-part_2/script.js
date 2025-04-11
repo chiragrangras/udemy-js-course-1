@@ -214,16 +214,47 @@ console.log(jonas.getSummary());
 for(let rep = 1; rep <=5; rep++){
     console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
 }
-*/
 
 const jonas = [
     'Jonas',
     'Schmedtmann',
     2037 - 1991,
     'teacher',
-    ['Michael','Peter','Steven']
+    ['Michael','Peter','Steven'],
+    true
 ]
 
+const types = [];
+
 for(let i = 0; i < jonas.length; i++){
-    console.log(jonas[i]);
+    console.log(jonas[i],typeof jonas[i]);
+    
+    // Filling type array
+    types.push (typeof jonas[i]);
 }
+
+console.log(types);
+
+const years = [1991, 1984, 2008, 2020];
+const ages = [];
+
+for(let i = 0; i < years.length; i++){
+    ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+// continue and break
+console.log('--- ONLY STRINGS ---');
+for(let i = 0; i < jonas.length; i++){
+    if(typeof jonas[i] !== 'string') continue;
+    console.log(jonas[i],typeof jonas[i]);
+}
+
+console.log('--- BREAK WITH NUMBER ---');
+for(let i = 0; i < jonas.length; i++){
+    if(typeof jonas[i] === 'number') break;
+    console.log(jonas[i],typeof jonas[i]);
+}
+*/
+
+
