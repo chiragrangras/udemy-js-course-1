@@ -198,7 +198,6 @@ console.log(jonas.age);
 console.log(jonas.age);
 
 console.log(jonas.getSummary());
-*/
 
 // console.log('Lifting weights repetition 1 🏋️‍♂️');
 // console.log('Lifting weights repetition 2 🏋️‍♂️');
@@ -214,4 +213,17 @@ console.log(jonas.getSummary());
 // for loop keeps running while condition is TRUE
 for(let rep = 1; rep <=5; rep++){
     console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
+}
+*/
+
+const jonas = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael','Peter','Steven']
+]
+
+for(let i = 0; i < jonas.length; i++){
+    console.log(jonas[i]);
 }
