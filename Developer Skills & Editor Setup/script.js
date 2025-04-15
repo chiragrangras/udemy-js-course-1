@@ -1,8 +1,3 @@
 "use stict";
 
-const x = 23;
-if (x === 23) {
-}
-
-const calcAge = (birthYear) => 2037 - birthYear;
-console.log(calcAge(1991));
+const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
