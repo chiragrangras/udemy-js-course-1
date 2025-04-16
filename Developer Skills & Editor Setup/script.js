@@ -1,6 +1,6 @@
 "use stict";
 
-const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+/* const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 
 const calsTempAmlitude = function (temps) {
   let max = temps[0];
@@ -16,6 +16,7 @@ const calsTempAmlitude = function (temps) {
   console.log(max, min);
   return max - min;
 };
+
 const amplitude = calsTempAmlitude(temperatures);
 console.log(amplitude);
 
@@ -23,3 +24,16 @@ const array1 = [1, 2, 3];
 const array2 = [4, 5, 6];
 const array3 = array1.concat(array2);
 console.log(array3); // [1, 2, 3, 4, 5, 6]
+*/
+
+const measureKelvin = function () {
+  const measurement = {
+    type: "temp",
+    unit: "celsius",
+    value: prompt("Degrees celsius:"),
+  };
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+console.log(measureKelvin());
