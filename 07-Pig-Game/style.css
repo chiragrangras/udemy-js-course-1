@@ -56,7 +56,7 @@ main{
 
 .score{
     font-size: 8rem;
-    font-weight: 800;
+    font-weight: 400;
     color: #c7365f;
     margin-bottom: auto;
 }
@@ -166,4 +166,8 @@ main{
 .player--winner .name{
     font-weight: 700;
     color: #c7365f;
+}
+
+.hidden{
+    display: none;
 }
