@@ -46,7 +46,7 @@ const switchPlayer = function () {
 // Rolling dice functionality
 btnRoll.addEventListener("click", function () {
   if (playing) {
-    // 1. Generate a radom dice roll
+    // 1. Generate a random dice roll
     const dice = Math.trunc(Math.random() * 6) + 1;
 
     // 2. Display the dice
@@ -68,7 +68,7 @@ btnRoll.addEventListener("click", function () {
 
 btnHold.addEventListener("click", function () {
   if (playing) {
-    // 1. Add current score to acticve player's score
+    // 1. Add current score to active player's score
     scores[activePlayer] += currentScore;
 
     // scores[1] = scores[1] + currentScore
@@ -76,7 +76,7 @@ btnHold.addEventListener("click", function () {
       scores[activePlayer];
 
     // 2. check if player's score is >= 100
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       // Finish the game
       playing = false;
       diceEl.classList.add("hidden");
@@ -93,4 +93,4 @@ btnHold.addEventListener("click", function () {
   }
 });
 
-btnNew.addEventListener("click", function () {});
+btnNew.addEventListener("click", init);
