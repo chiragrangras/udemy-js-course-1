@@ -1,6 +1,6 @@
 "use strict";
 
-function calcAge(birthYear) {
+/* function calcAge(birthYear) {
   const age = 2037 - birthYear;
   console.log(firstName);
   function printAge() {
@@ -35,3 +35,18 @@ const firstName = "Jonas";
 calcAge(1991);
 // console.log(age);
 // printAge();
+*/
+
+// Hoisting and TDZ
+console.log(me);
+// console.log(job);
+// console.log(year);
+
+var me = 'Jonas';
+let job = 'teacher';
+const year = 1991;
+
+// Functions
+function addDecl(a,b){
+    return a + b;
+}
