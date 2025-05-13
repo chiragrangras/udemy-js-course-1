@@ -77,7 +77,6 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
-*/
 
 // console.log(this);
 
@@ -108,3 +107,28 @@ const matilda = {
 
 matilda.calcAge = jonas.calcAge;
 matilda.calcAge();
+
+const f = jonas.calcAge;
+f();
+*/
+
+const jonas = {
+  firstName: "joanas",
+  year: 1991,
+  calcAge: function () {
+    // console.log(this);
+    console.log(2037 - this.year);
+
+    const isMillenial = function () {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+jonas.greet();
+jonas.calcAge();
