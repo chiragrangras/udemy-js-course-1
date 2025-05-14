@@ -160,8 +160,8 @@ addArrow(2, 5, 8);
 ////////////////////////////////////////
 // Objects Reference in Primitive (Shallow Vs. Deep Copies)
 
-const jessica = {
-  firstName: "Jessica",
+const jessica1 = {
+  firstName: "jessica1",
   lastName: "Williams",
   age: 27,
 };
@@ -171,10 +171,35 @@ function marryPerson(originalPerson, newLastName) {
   return originalPerson;
 }
 
-const marriedJessica = marryPerson(jessica, "Davis");
+const marriedjessica1 = marryPerson(jessica1, "Davis");
 
-// const marriedJessica = jessica;
-// marriedJessica.lastName = "Davis";
+// const marriedjessica1 = jessica1;
+// marriedjessica1.lastName = "Davis";
 
-console.log("Before:", jessica);
-console.log("After:", marriedJessica);
+console.log("Before:", jessica1);
+console.log("After:", marriedjessica1);
+
+const jessica = {
+  firstName: "jessica1",
+  lastName: "Williams",
+  age: 27,
+  family: ["Alice", "Bob"],
+};
+
+// Shallow copy
+const jessicaCopy = { ...jessica };
+jessicaCopy.lastName = "Davis";
+
+// jessicaCopy.family.push("Mary");
+// jessicaCopy.family.push("John");
+
+// console.log("Before:", jessica);
+// console.log("After:", jessicaCopy);
+
+// Deep copy/clone
+const jessicaClone = structuredClone(jessica);
+jessicaClone.family.push("Mary");
+jessicaClone.family.push("John");
+
+console.log("Original:", jessica);
+console.log("Clone:", jessicaClone);
