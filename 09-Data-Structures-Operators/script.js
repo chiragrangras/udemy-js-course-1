@@ -25,50 +25,45 @@ const restaurtant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
-  orderDelivery: function ({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
-    console.log(`order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = "20:00",
+    address,
+  }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
   },
 };
 
-restaurtant.orderDelivery({
-  time: "22:30",
-  address: "Via del Sole, 21",
-  mainIndex: 2,
-  starterIndex: 2,
-});
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
 
-restaurtant.orderDelivery({
-  address: "Via del Sole, 21",
-  starterIndex: 1,
-})
+const newArr = [1, 2, ...arr];
+console.log(newArr);
 
-const { name, openingHours, categories } = restaurtant;
-console.log(name, openingHours, categories);
+console.log(...newArr);
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurtant;
-console.log(restaurantName, hours, tags);
+const newMenu = [...restaurtant.mainMenu, "Gnocci"];
+console.log(newMenu);
 
-// Default values
-const { menu = [], starterMenu: starters = [] } = restaurtant;
-console.log(menu, starters);
+// Copy array
+const mainMenuCopy = [...restaurtant.mainMenu];
 
-// Mutating variables
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 14 };
+// Join 2 arrays
+const menu = [...restaurtant.starterMenu, ...restaurtant.mainMenu];
+console.log(menu);
 
-({ a, b } = obj);
-console.log(a, b);
+// Iterables: arrays, strings, maps, sets. NOT objects
+const str = "Jonas";
+const letters = [...str, "", "S."];
+console.log(letters);
+console.log(...str);
+// console.log(`${...str} Schmedtmann`); // Error
 
-// Nested objects
-const {
-  fri: { open: o, close: c },
-} = openingHours;
-console.log(o, c);
+
 
 /*
 const arr = [2, 3, 4];
