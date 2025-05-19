@@ -64,7 +64,6 @@ console.log(...str);
 // console.log(`${...str} Schmedtmann`); // Error
 
 
-
 /*
 const arr = [2, 3, 4];
 const a = arr[0];
