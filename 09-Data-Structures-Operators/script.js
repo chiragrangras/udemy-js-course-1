@@ -35,6 +35,12 @@ const restaurtant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1},${ing2} and ${ing3}`
+    );
+  },
 };
 
 const arr = [7, 8, 9];
@@ -63,6 +69,25 @@ console.log(letters);
 console.log(...str);
 // console.log(`${...str} Schmedtmann`); // Error
 
+// Real-world example
+const ingredients = [
+  // prompt("Let's make pasra! Ingredient 1?"),
+  // prompt("Ingredient 2?"),
+  // prompt("Ingredient 3?"),
+];
+console.log(ingredients);
+
+restaurtant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+restaurtant.orderPasta(...ingredients);
+
+// Objects
+const newRestaurtant = { foundedIn: 1998, ...restaurtant, founder: "Giuseppe" };
+console.log(newRestaurtant);
+
+const restaurtantCopy = { ...restaurtant };
+restaurtantCopy.name = "Ristorante Roma";
+console.log(restaurtantCopy.name);
+console.log(restaurtant.name);
 
 /*
 const arr = [2, 3, 4];
