@@ -42,12 +42,42 @@ const restaurtant = {
     );
   },
 
-  orderPizza: function(mainIngredient, ...otherIngredients) {
+  orderPizza: function (mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
-  }
+  },
 };
 
+console.log("---------OR---------");
+// Use ANY data type, return ANY data type, short-circuiting
+console.log(3 || "Jonas");
+console.log("" || "Jonas");
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(null || 0 || "" || "Hello" || 23 || null);
+
+restaurtant.numGuests = 0;
+const guests1 = restaurtant.numGuests ? restaurtant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurtant.numGuests || 10;
+console.log(guests2);
+
+console.log("---------AND---------");
+console.log(0 && "Jonas");
+console.log(7 && "Jonas");
+
+console.log("Hello" && 23 && null && "Jonas");
+
+// Practical example
+if(restaurtant.orderPizza) {
+  restaurtant.orderPizza("mushrooms", "spinach");
+}
+
+restaurtant.orderPizza && restaurtant.orderPizza('mushrooms', 'spinach');
+
+/*
 // 1) Destructuring Arrays
 
 // SPREAD, because on RIGHT side of =
