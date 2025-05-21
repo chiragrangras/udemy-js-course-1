@@ -48,6 +48,17 @@ const restaurtant = {
   },
 };
 
+restaurtant.numGuests = 0;
+const guests = restaurtant.numGuests || 10;
+console.log(guests);
+
+const guestsCorrect = restaurtant.numGuests ?? 10;
+console.log(guestsCorrect);
+
+/*
+///////////////////////////////////////
+// Short-Circuiting (&& and ||)
+
 console.log("---------OR---------");
 // Use ANY data type, return ANY data type, short-circuiting
 console.log(3 || "Jonas");
