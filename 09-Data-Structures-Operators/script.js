@@ -49,6 +49,72 @@ const restaurtant = {
   },
 };
 
+//////////////////////////////////////
+// New Operations to Make Sets Useful!
+
+const ItalianFoods = new Set([
+  "pasta",
+  "gnocchi",
+  "tomatoes",
+  "olive oil",
+  "garlic",
+  "basil",
+]);
+
+const mexicanFoods = new Set([
+  "tortilla",
+  "beans",
+  "rice",
+  "tomatoes",
+  "avocado",
+  "garlic",
+]);
+
+const commonFoods = ItalianFoods.intersection(mexicanFoods);
+console.log("Intersection:", commonFoods);
+
+const ItalianMexicanFusion = ItalianFoods.union(mexicanFoods);
+console.log("Union:", ItalianMexicanFusion);
+
+/*
+///////////////////////////////////////
+// Sets
+const orderSet = new Set([
+  "Pasta",
+  "Pizza",
+  "Pizza",
+  "Risotto",
+  "Pasta",
+  "Pizza",
+]);
+console.log(orderSet);
+
+console.log(new Set("Jonas"));
+console.log(orderSet.size);
+console.log(orderSet.has("Pizza"));
+console.log(orderSet.has("Bread"));
+orderSet.add("Garlic Bread");
+orderSet.add("Garlic Bread");
+orderSet.delete("Risotto");
+console.log(orderSet);
+
+for (const order of orderSet) console.log(order);
+
+// Example
+const staff = [
+  "Waiter",
+  "Chef",
+  "Manager",
+  "Waiter",
+  "Chef",
+  "Waiter",
+  "Manager",
+];
+
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+
 // Properties NAMES
 const properties = Object.keys(openingHours);
 console.log(properties);
@@ -73,7 +139,6 @@ for (const [day, { open, close }] of entries) {
   console.log(`On ${day} we open at ${open} and close at ${close}`);
 }
 
-/*
 // Optional Chaining
 if (restaurtant.openingHours && restaurtant.openingHours.mon)
   console.log(restaurtant, openingHours.mon.open);
