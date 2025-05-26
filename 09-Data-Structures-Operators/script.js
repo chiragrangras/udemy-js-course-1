@@ -49,6 +49,25 @@ const restaurtant = {
   },
 };
 
+const airlines = "TAP Air Portugal";
+const plane = "A320neo";
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+
+console.log("B737"[0]);
+console.log(airlines.length);
+console.log("B737".length);
+
+console.log(airlines.indexOf("r"));
+console.log(airlines.lastIndexOf("r"));
+console.log(airlines.indexOf("portugal"));
+
+
+/*
+////////////////////////////////
+// Code Challenge
 const gameEvents = new Map([
   [17, "⚽️ GOAL"],
   [36, "🔁 Substitution"],
@@ -80,7 +99,12 @@ console.log(
   `An event happened, on average, every ${time / gameEvents.size} minutes`
 );
 
-/*
+// 4.
+for (const [min, event] of gameEvents) {
+  const half = min <= 45 ? "FIRST" : "SECOND";
+  console.log(`[${half} HALF] ${min}: ${event} `);
+}
+
 const questions = new Map([
   ["question", "What is the best programming language in the world ?"],
   [1, "C"],
