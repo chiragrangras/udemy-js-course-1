@@ -50,6 +50,30 @@ const restaurtant = {
 };
 
 const airlines = "TAP Air Portugal";
+
+console.log(airlines.toLowerCase());
+console.log(airlines.toUpperCase());
+
+// Fix capitalization in name
+const passenger = "jOnAs"; // Jonas
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+// Comparing emails
+const email = "hello@jonas.io";
+const loginEmail = " Hello@Jonas.Io \n";
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+
+const normalizedEmail = loginEmail.toLowerCase().trim();  
+console.log(normalizedEmail);
+console.log(email === normalizedEmail);
+
+/*
+const airlines = "TAP Air Portugal";
 const plane = "A320neo";
 
 console.log(plane[0]);
@@ -64,8 +88,32 @@ console.log(airlines.indexOf("r"));
 console.log(airlines.lastIndexOf("r"));
 console.log(airlines.indexOf("portugal"));
 
+console.log(airlines.slice(4));
+console.log(airlines.slice(4,7));
 
-/*
+console.log(airlines.slice(0, airlines.indexOf(" ")));
+console.log(airlines.slice(airlines.lastIndexOf(" ") + 1));
+
+console.log(airlines.slice(-2));
+console.log(airlines.slice(1, -1));
+
+
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seats
+  const s = seat.slice(-1);
+  if(s === 'B' || s === 'E')
+    console.log(`You got the middle seat!😣`);
+  else
+    console.log(`You got lucky!😎`);
+}
+
+checkMiddleSeat("11B");
+checkMiddleSeat("23C");
+checkMiddleSeat("3E");
+
+console.log(new String("Jonas"));
+console.log(typeof new String("Jonas"));
+
 ////////////////////////////////
 // Code Challenge
 const gameEvents = new Map([
