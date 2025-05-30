@@ -26,7 +26,6 @@ createBooking("LH123", 2, 800);
 createBooking("LH123", 2);
 createBooking("LH123", 5);
 createBooking("LH123", undefined, 1000);
-*/
 
 class BookingDetails {
   constructor(flightNum, price = 200, numAdults = 1, numChildren = 0) {
@@ -69,16 +68,30 @@ bookings.push(booking1, booking2, booking3, booking4, booking5);
 bookings.forEach((booking) => {
   console.log(JSON.stringify(booking.getBookingSummary()));
 });
+*/
 
-// const flight = "LH234";
-// const jonas = {
-//   name: "Jonas Schmedtmann",
-//   passport: 123456789,
-// };
+const flight = "LH234";
+const jonas = {
+  name: "Jonas Schmedtmann",
+  passport: 123456789,
+};
 
-// const checkIn = function (flightNum, passenger) {
-//   flightNum = "LH999";
+const checkIn = function (flightNum, passenger) {
+  flightNum = "LH999";
+  passenger.name = "Mr. " + passenger.name;
 
-// }
+  if(passenger.passport === 123456789) {
+    alert("Checked in");
+  }else {
+    alert("Wrong passport!");
+  }
+}
 
-// checkIn(flight, jonas);
+checkIn(flight, jonas);
+console.log(flight);
+console.log(jonas);
+
+// Is the same as doing...
+const flightNum = flight;
+const passenger = jonas;
+
