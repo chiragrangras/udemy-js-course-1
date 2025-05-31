@@ -100,4 +100,4 @@ const newPassport = function(person) {
 }
 
 newPassport(jonas);
-checkIn(flightNum, jonas);
+checkIn(flight, jonas);
