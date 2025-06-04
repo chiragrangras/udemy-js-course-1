@@ -234,7 +234,7 @@ const addTaxRate = function (rate) {
 const addVAT2 = addTaxRate(0.23);
 console.log(addVAT2(100));
 console.log(addVAT2(23));
-*/
+
 
 const poll = {
   question: "What is your favourite programming language?",
@@ -274,3 +274,28 @@ document
 
 poll.displayResults.call({ answers: [5, 2, 3] }, "string");
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, "string");
+
+const runOnce = function () {
+  console.log("This will never run again");
+};
+runOnce();
+
+// IIFE (Immediately Invoked Function Expression)
+(function () {
+  console.log("This will never run again");
+});
+
+(() => {
+  console.log("This will ALSO never run again");
+})();
+
+{
+  const isPrivate = 23;
+  var notPrivate = 46;
+}
+
+// console.log(isPrivate)
+console.log(notPrivate); // 46
+*/
+
+
