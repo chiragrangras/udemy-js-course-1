@@ -1,186 +1,187 @@
+
 /*
-* Use this CSS to learn some interesting techniques.
-* in case you're wondering how I built this UI
-* Have fun!
-*/
+ * Use this CSS to learn some intersting techniques,
+ * in case you're wondering how I built the UI.
+ * Have fun! 😁
+ */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-html{
-    font-size: 62.5%;
-    box-sizing: border-box;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: "Poppins", sans-serif;
-    color: #444;
-    background-color: #f3f3f3;
-    height: 100vh;
-    padding: 2rem;
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  background-color: #f3f3f3;
+  height: 100vh;
+  padding: 2rem;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
 }
 
-.welcome{
-    font-size: 1.9rem;
-    font-weight: 500;
+.welcome {
+  font-size: 1.9rem;
+  font-weight: 500;
 }
 
-.logo{
-    height: 5.25rem;
+.logo {
+  height: 5.25rem;
 }
 
-.login{
-    display: flex;
+.login {
+  display: flex;
 }
 
-.login_input{
-    border: none;
-    padding: 0.5rem 2rem;
-    font-size: 1.6rem;
-    font-family: inherit;
-    text-align: center;
-    width: 12rem;
-    border-radius: 10rem;
-    margin-right: 1rem;
-    color: inherit;
-    border: 1px solid #fff;
-    transition: all 0.3s;
+.login__input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 1px solid #fff;
+  transition: all 0.3s;
 }
 
-.login_input:focus{
-    outline: none;
-    border:1px solid #ccc;
+.login__input:focus {
+  outline: none;
+  border: 1px solid #ccc;
 }
 
-.login_input:hover{
-    color: #bbb;
+.login__input::placeholder {
+  color: #bbb;
 }
 
-.login_btn{
-    border: none;
-    background :none;
-    font-size: 2.2rem;
-    color: inherit;
-    cursor: pointer;
-    transition: all 0.3s;
+.login__btn {
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.login_btn:hover,
-.login_btn:focus,
-.login--sort:hover,
-.login--sort:focus{
-    outline: none;
-    color: #777;
+.login__btn:hover,
+.login__btn:focus,
+.btn--sort:hover,
+.btn--sort:focus {
+  outline: none;
+  color: #777;
 }
 
 /* MAIN */
-.app{
-    position: relative;
-    max-width: 100rem;
-    margin: 4rem auto;
-    display: grid;
-    grid-template-columns: 4fr 3fr;
-    grid-template-rows: auto repeat(3, 15rem) auto;
-    gap: 2rem;
+.app {
+  position: relative;
+  max-width: 100rem;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 2rem;
 
-    /* Note This creates the fade in/out anumation */
-    opacity: 0;
-    transition: all 1s;
+  /* NOTE This creates the fade in/out anumation */
+  /* opacity: 0; */
+  transition: all 1s;
 }
 
-.balance{
-    grid-column: 1 / span 2;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: 2rem;
+.balance {
+  grid-column: 1 / span 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
-.balance_label{
-    font-size: 2.2rem;
-    font-weight: 500;
-    margin-bottom: -0.2rem;
+.balance__label {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
 }
 
-.balance_date{
-    font-size: 1.4rem;
-    color: #888;
+.balance__date {
+  font-size: 1.4rem;
+  color: #888;
 }
 
-.balance_value{
-    font-size: 4.5rem;
-    font-weight: 400;
+.balance__value {
+  font-size: 4.5rem;
+  font-weight: 400;
 }
 
-/* MOVEMENT */
-.movements{
-    grid-column: 2 / span 3;
-    background-color: #fff;
-    border-radius: 1rem;
-    overflow: scroll;
+/* MOVEMENTS */
+.movements {
+  grid-row: 2 / span 3;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: scroll;
 }
 
-.movements_row{
-    padding: 2.25rem 4rem;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #eee;
+.movements__row {
+  padding: 2.25rem 4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
 }
 
-.movements_type{
-    font-size: 1.1rem;
-    text-transform:uppercase;
-    font-weight: 500;
-    color: #fff;
-    padding: 0.1rem 1rem;
-    border-radius: 10rem;
-    margin-right: 2rem;
+.movements__type {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  padding: 0.1rem 1rem;
+  border-radius: 10rem;
+  margin-right: 2rem;
 }
 
-.movements_date{
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: #666;
+.movements__date {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #666;
 }
 
-.movements_type--desposit{
-    background-image: linear-gradient(to top left,#39b385,#9be15b);
+.movements__type--deposit {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
 }
 
-.movements_type--withdrawal{
-    background-image: linear-gradient(to top left,#e52a5a,#ff585f);
+.movements__type--withdrawal {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
 }
 
-.movements_value{
-    font-size: 1.7rem;
-    margin-left: auto;
+.movements__value {
+  font-size: 1.7rem;
+  margin-left: auto;
 }
 
 /* SUMMARY */
-.summary{
-    grid-row: 5/6;
-    display: flex;
-    align-items: baseline;
-    padding: 0 0.3rem;
-    margin-top: 1rem;
+.summary {
+  grid-row: 5 / 6;
+  display: flex;
+  align-items: baseline;
+  padding: 0 0.3rem;
+  margin-top: 1rem;
 }
 
-.summary_label{
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin-right: 0.8rem;
+.summary__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
 }
 
 .summary__value {
