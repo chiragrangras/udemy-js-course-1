@@ -85,7 +85,7 @@ displayMovements(account1.movements);
 /////////////////////////////////////////////////
 // LECTURES
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
@@ -165,3 +165,11 @@ currenciesUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
 */
+
+const euroToUsd = 1.1;
+
+const movementsUSD = movements.map(function(mov){
+  return mov * euroToUsd;
+})
+console.log(movements);
+console.log(movementsUSD);
