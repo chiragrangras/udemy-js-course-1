@@ -84,6 +84,18 @@ displayMovements(account1.movements);
 /////////////////////////////////////////////////
 // LECTURES
 
+const createUsernames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(" ")
+      .map((name) => name[0])
+      .join("");
+  });
+};
+createUsernames(accounts);
+console.log(accounts);
+
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
@@ -163,7 +175,6 @@ console.log(currenciesUnique);
 currenciesUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
-*/
 
 const euroToUsd = 1.1;
 
@@ -199,3 +210,14 @@ console.log(movementsDescriptions);
 //   }
 // });
 // console.log(movementsDescriptions2);
+*/
+
+const deposits = movements.filter(function (mov) {
+  return mov > 0;
+});
+console.log(movements);
+console.log(deposits);
+
+const depositsFor = [];
+for (const mov of movements) if (mov > 0) depositsFor.push(mov);
+console.log(depositsFor);
