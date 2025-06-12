@@ -229,7 +229,7 @@ console.log(depositsFor);
 
 const withdrawals = movements.filter((mov) => mov < 0);
 console.log(withdrawals);
-*/
+
 
 console.log(movements);
 
@@ -255,3 +255,4 @@ const max = movements.reduce((acc, mov) => {
   else return mov;
 },movements[0]);
 console.log(max);
+*/
