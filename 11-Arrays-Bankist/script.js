@@ -99,8 +99,8 @@ const calcDisplaySummary = function (acc) {
 
   const interest = acc.movements
     .filter((mov) => mov > 0)
-    //.map((deposit) => (deposit * account1.interestRate) / 100);
-    .map((deposit) => (deposit * 1.2) / 100)
+    .map((deposit) => (deposit * acc.interestRate) / 100)
+    //.map((deposit) => (deposit * 1.2) / 100)
     .filter((int, i, arr) => {
       // console.log(arr);
       return int >= 1;
