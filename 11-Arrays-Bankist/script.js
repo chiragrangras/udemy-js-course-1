@@ -127,7 +127,7 @@ const updateUI = function (acc) {
 
   // Display summary
   calcDisplaySummary(acc);
-}
+};
 
 // Event handlers
 let currentAccount;
@@ -175,11 +175,33 @@ btnTransfer.addEventListener("click", function (e) {
     // Doing the transfer
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
-    
-    
+
     // Update UI
     updateUI(currentAccount);
   }
+});
+
+btnClose.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value) === currentAccount.pin
+  ) {
+    const index = accounts.findIndex(
+      (acc) => acc.username === currentAccount.username
+    );
+    console.log(index);
+    //.indexof(23);
+
+    // Delete account
+    accounts.splice(index, 1);
+
+    // Hide UI
+    containerApp.style.opacity = 0;
+  }
+
+  inputCloseUsername.value = inputClosePin.value = "";
 });
 
 /////////////////////////////////////////////////
@@ -363,4 +385,32 @@ console.log(accounts);
 
 const account = accounts.find((acc) => acc.owner === "Jessica Davis");
 console.log(account);
+
+//////////////////////////////
+// The New findLast and findLastIndex Methods
+
+console.log(movements);
+const lastWithdrawal = movements.findLast((mov) => mov < 0);
+console.log(lastWithdrawal);
+
+const lastestlargeMovements = movements.findLastIndex(
+  (mov) => Math.abs(mov) > 1000
+);
+console.log(lastestlargeMovements);
+console.log(
+  `Your latest Large Movement was ${
+    movements.length - lastestlargeMovements
+  } movements ago`
+);
 */
+
+console.log(movements);
+
+// EQUALITY
+console.log(movements.includes(-130));
+
+// CONDITION
+console.log(movements.some(mov => mov === -130));
+
+const anyDeposits = movements.some((mov) => mov > 1500);
+console.log(anyDeposits);
