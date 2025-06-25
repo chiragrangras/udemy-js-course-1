@@ -517,7 +517,6 @@ console.log(groupedByActivity);
 // console.log(groupedAccounts);
 const groupedAccounts = Object.groupBy(accounts, ({type}) => type);
 console.log(groupedAccounts);
-*/
 
 labelBalance.addEventListener("click", function () {
   const movementsUI = Array.from(
@@ -526,3 +525,13 @@ labelBalance.addEventListener("click", function () {
   );
   console.log(movementsUI);
 });
+*/
+
+///////////////////////////////////////////
+// Non-Destructive Alternatives: toReversed, toSorted, toSpliced, with
+console.log(movements);
+const reversedMov = movements.toReversed();
+console.log(reversedMov);
+console.log(movements);
+
+// toSorted (sort) , toSpliced (splice)
