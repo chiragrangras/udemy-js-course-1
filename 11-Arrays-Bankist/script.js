@@ -535,3 +535,9 @@ console.log(reversedMov);
 console.log(movements);
 
 // toSorted (sort) , toSpliced (splice)
+
+// movements[1] = 2000;
+
+const newMovements = movements.with(1, 2000);
+console.log(newMovements);
+console.log(movements);
