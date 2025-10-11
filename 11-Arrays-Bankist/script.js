@@ -529,15 +529,32 @@ labelBalance.addEventListener("click", function () {
 
 ///////////////////////////////////////////
 // Non-Destructive Alternatives: toReversed, toSorted, toSpliced, with
-console.log(movements);
-const reversedMov = movements.toReversed();
-console.log(reversedMov);
-console.log(movements);
+// console.log(movements);
+// const reversedMov = movements.toReversed();
+// console.log(reversedMov);
+// console.log(movements);
 
 // toSorted (sort) , toSpliced (splice)
 
 // movements[1] = 2000;
 
-const newMovements = movements.with(1, 2000);
-console.log(newMovements);
-console.log(movements);
+// const newMovements = movements.with(1, 2000);
+// console.log(newMovements);
+// console.log(movements);
+
+// Array Methods Practice
+
+// 1.
+const bankDepositSum = accounts
+  .flatMap((acc) => acc.movements)
+  .filter((mov) => mov > 0)
+  .reduce((sum, cur) => sum + cur, 0);
+
+console.log(bankDepositSum);
+
+// 2.
+const numDeposits1000 = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce((mov) => mov >= 1000).length;
+
+console.log(numDeposits1000);
