@@ -254,7 +254,7 @@ btnSort.addEventListener('click', function (e) {
 
 // Base 10 - 0 to 9. 1/10 = 0.1. 3/10 = 3.33333333333333
 // Binary base 2 - 0 1
-console.log(0.1 + 0.2); // 0.30000000000000004
+/* console.log(0.1 + 0.2); // 0.30000000000000004
 console.log(0.1 + 0.2 === 0.3); // false
 
 // Conversion
@@ -270,6 +270,7 @@ console.log(Number.parseFloat(' 2.5rem '));
 
 // console.log(parseFloat(' 2.5rem '));
 
+// Checking if value is NaN
 console.log(Number.isNaN(20));
 console.log(Number.isNaN('20'));
 console.log(Number.isNaN(+'20X'));
@@ -280,3 +281,9 @@ console.log(Number.isFinite(20));
 console.log(Number.isFinite('20'));
 console.log(Number.isFinite(+'20X'));
 console.log(Number.isFinite(23 / 0));
+*/
+
+// Math and Rounding
+console.log(Math.sqrt(25));
+console.log(25 ** (1 / 2));
+console.log(8 ** (1 / 3));
